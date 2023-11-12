@@ -8,7 +8,7 @@ const Navbar = ({ isShown, setShow }: {
   setShow:Dispatch<React.SetStateAction<boolean>>
 }) => {
   return (
-    <nav className={`w-full min-w-[200px] md:w-1/6 p-2 md:p-4 md:h-full ${isShown ? 'h-5/6 absolute z-50 w-72 bg-transparent backdrop-blur-md':'hidden'} md:relative md:flex flex-col justify-between shadow-sm text-slate-600 dark:text-slate-300 bg-white dark:bg-slate-900 rounded-xl`}>
+    <nav className={`w-full min-w-[200px] md:w-1/6 p-2 md:p-4 md:h-full ${isShown ? 'flex h-[95%] absolute z-50 w-72 bg-transparent backdrop-blur-md':'hidden'} md:relative md:flex flex-col justify-between shadow-sm text-slate-600 dark:text-slate-300 bg-white dark:bg-slate-900 rounded-xl`}>
       <section className='flex flex-col gap-6'>
         {/* restaurent logo */}
         <div className='text-start p-4 font-bold text-2xl flex justify-between'>
@@ -19,12 +19,12 @@ const Navbar = ({ isShown, setShow }: {
         <div className='flex flex-col gap-2'>
             {
                 nav_links.map(({ title, icon }: Nav_link_types) => (
-                    <NavLinkCard key={title} title={title} icon={icon}/>
+                    <NavLinkCard close={setShow} key={title}  title={title} icon={icon}/>
                   ))    
             }
         </div>
       </section>
-      <section>
+      <section className=''>
               <h1>helps and stuffs</h1>
               <h1>theme mode change</h1>
       </section>

@@ -13,12 +13,54 @@ const routes = createBrowserRouter([
     element:<App/>,
   },
   {
+    path: "/dashboard/products/",
+    element: <Layout>
+      <App/>
+    </Layout>
+  },
+  {
+    path: "/dashboard/reviews",
+    element:<Layout>
+    <App/>
+  </Layout>
+  },
+  {
+    path: "/dashboard/orders",
+    element:<Layout>
+    <App/>
+  </Layout>
+  },
+  {
+    path: "/dashboard/customers",
+    element:<Layout>
+    <App/>
+  </Layout>
+  },
+  {
     path: '/dashboard',
     element: (
       <Layout>
         <Dashboard/>
       </Layout>
-    )
+    ),
+    // children: [
+    //   {
+    //     path: "/dashboard/products/",
+    //     element:<App/>
+    //   },
+    //   {
+    //     path: "/dashboard/reviews",
+    //     element:<App/>
+    //   },
+    //   {
+    //     path: "/dashboard/orders",
+    //     element:<App/>
+    //   },
+    //   {
+    //     path: "/dashboard/customers",
+    //     element:<App/>
+    //   },
+    // ]
   }
 ]);
 
