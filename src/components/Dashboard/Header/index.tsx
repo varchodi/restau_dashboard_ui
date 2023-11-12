@@ -1,14 +1,24 @@
-import { BiMessageDetail} from "react-icons/bi";
+import {Dispatch} from 'react'
+import { BiMessageDetail, BiMenu } from "react-icons/bi";
 import AddBtn from "./AddBtn"
 import SearchBar from "./SearchBar"
 import { IoMdNotificationsOutline} from "react-icons/io";
 
 
-const Header = () => {
+const Header = ({  setShow }: {
+    isShown: boolean,
+    setShow:Dispatch<React.SetStateAction<boolean>>
+  }) => {
+    
   return (
     <header className="p-2 md:p-4 flex flex-col md:flex-row gap-x-2 gap-y-4 justify-between items-center shadow-sm text-slate-600 dark:text-slate-300 bg-white dark:bg-slate-900 rounded-xl">
-      <section className="md:hidden">
+      <section className="w-full px-2 md:hidden flex justify-between">
+        <button className="text-3xl" onClick={()=>setShow(true)}>
+            <BiMenu/>
+        </button>
+        <h1>
         Logo
+        </h1>
       </section>
       
       {/* search bar */}
