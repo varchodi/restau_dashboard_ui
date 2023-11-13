@@ -27,7 +27,7 @@ const Header = ({  setShow }: {
       <section className="w-full md:w-auto flex flex-row-reverse md:flex-row  items-center gap-4  justify-between">
         {/*?? Add new recepe or food btn(link) */}
         <AddBtn/>
-        <div className="flex flex-row-reverse md:flex-row  justify-center items-center">    
+        <div className="hidden lg:flex flex-row-reverse md:flex-row  justify-center items-center">    
             {/* message notif btn */}
             <article className="flex justify-center m-0">
                 <p className="font-bold text-2xl"><BiMessageDetail/></p>

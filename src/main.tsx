@@ -5,6 +5,7 @@ import App from './App.tsx'
 import './index.css'
 import Dashboard from './pages/Dashboard/index.tsx';
 import Layout from './components/Dashboard/layout.tsx';
+import ProductsPage from './pages/Dashboard/products/index.tsx';
 
 //routes settings
 const routes = createBrowserRouter([
@@ -15,7 +16,7 @@ const routes = createBrowserRouter([
   {
     path: "/dashboard/products/",
     element: <Layout>
-      <App/>
+      <ProductsPage/>
     </Layout>
   },
   {
