@@ -35,3 +35,10 @@ export type CustomerCardType = {
     username: string;
     imgurl: string;
 }
+
+export type ReviewCardType = {
+    user: CustomerCardType,
+    date: Date | string,
+    avis: [string, string],
+    description: string;
+}

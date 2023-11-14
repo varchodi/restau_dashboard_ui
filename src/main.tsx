@@ -7,6 +7,7 @@ import Dashboard from './pages/Dashboard/index.tsx';
 import Layout from './components/Dashboard/layout.tsx';
 import ProductsPage from './pages/Dashboard/products/index.tsx';
 import Customers from './pages/Dashboard/Customers/index.tsx';
+import ReviewsPage from './pages/Dashboard/Reviews/index.tsx';
 
 //routes settings
 const routes = createBrowserRouter([
@@ -23,7 +24,7 @@ const routes = createBrowserRouter([
   {
     path: "/dashboard/reviews",
     element:<Layout>
-    <App/>
+    <ReviewsPage/>
   </Layout>
   },
   {

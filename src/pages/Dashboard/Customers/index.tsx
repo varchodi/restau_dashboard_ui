@@ -15,8 +15,8 @@ const Customers = () => {
     }
     
   return (
-    <div className='h-full flex gap-10 rounded-lg overflow-y-hidden relative'>
-      <section className={`h-full w-full md:w-1/3 ${openInfo?"hidden sm:block":"block"}  bg-gray-100  dark:bg-slate-800 rounded-md`}>
+    <div className='h-full flex gap-4 rounded-lg overflow-y-hidden relative'>
+      <section className={`h-full w-full md:w-5/12 ${openInfo?"hidden sm:block":"block"}  bg-gray-100  dark:bg-slate-800 rounded-md `}>
         <article
         
          className="flex justify-start items-center gap-4 border-b-2 dark:border-b-slate-700 p-4 cursor-pointer">
