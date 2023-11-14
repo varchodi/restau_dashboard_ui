@@ -7,6 +7,7 @@ const Customers = () => {
   const [setselectedCustomers, setSetselectedCustomers] = useState<string>("");
   const [currentCustomer, setCurrentCustomer] = useState<string>("");
   const [openInfo, setOpenInfo] = useState<boolean>(false);
+
     const fakeCustomer: CustomerCardType = {
         id:"12345",
     name:"Jhon Doe",

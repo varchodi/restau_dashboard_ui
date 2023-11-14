@@ -2,7 +2,7 @@ import { ReviewCardType } from '../../../common.types'
 
 const ReviewCard = ({user,date,avis,description}:ReviewCardType) => {
   return (
-    <div className='flex gap-4 w-full text-start bg-gray-200 dark:bg-slate-900 hover:shadow-md p-2 rounded-md'>
+    <div className='flex gap-4 w-full text-start bg-gray-200 dark:bg-slate-800 hover:shadow-md p-2 rounded-md'>
           <img className='w-20 h-20 rounded-lg '
               src={user.imgurl} alt="profile-img" />
           <section>
