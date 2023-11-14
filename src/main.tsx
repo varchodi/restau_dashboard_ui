@@ -6,6 +6,7 @@ import './index.css'
 import Dashboard from './pages/Dashboard/index.tsx';
 import Layout from './components/Dashboard/layout.tsx';
 import ProductsPage from './pages/Dashboard/products/index.tsx';
+import Customers from './pages/Dashboard/Customers/index.tsx';
 
 //routes settings
 const routes = createBrowserRouter([
@@ -34,7 +35,7 @@ const routes = createBrowserRouter([
   {
     path: "/dashboard/customers",
     element:<Layout>
-    <App/>
+    < Customers/>
   </Layout>
   },
   {

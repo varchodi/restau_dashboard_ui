@@ -23,7 +23,7 @@ const ProductsPage = () => {
   return (
     <div className="h-full  bg-white dark:bg-slate-900 rounded-lg overflow-x-auto relative">
         {/* categories */}
-      <section className="flex justify-start items-center gap-4 overflow-y-auto p-4 z-50 bg-gray-100 dark:bg-slate-900 dark:bg-opacity-80 bg-opacity-40 backdrop-blur-lg sticky top-0">
+      <section className="flex justify-start items-center gap-4 overflow-y-auto p-4 z-20 bg-gray-100 dark:bg-slate-900 dark:bg-opacity-80 bg-opacity-40 backdrop-blur-lg sticky top-0">
         {
           categories.map((category,i) => <CategoryCard key={category.name+i} data={category} currentCategry={ currentCategory}  setCategory={setCategory}/>)
         }
@@ -31,10 +31,10 @@ const ProductsPage = () => {
       {/* foods */}
       <section className="grid p-4 grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-y-1 sm:gap-y-4">
         {
-            foods.map((food) => (
+            foods.map((food,i) => (
             // ??  try to fix this ...
             
-                <FoodCard {...food} />
+                <FoodCard key={i} {...food} />
             ))
         }
       </section>

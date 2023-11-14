@@ -28,3 +28,10 @@ export type FoodCardType = {
     price: number;
     reductionPrice: number;
 }
+
+export type CustomerCardType = {
+    id:string
+    name: string;
+    username: string;
+    imgurl: string;
+}
