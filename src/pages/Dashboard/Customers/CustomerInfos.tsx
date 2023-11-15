@@ -37,7 +37,7 @@ const CustomerInfos = ({ close,isOpened, customer }: {
   const reviews = new Array(3).fill(fakeReview);
 
   return isOpened? (
-    <section className="bg-white w-full  dark:bg-slate-900  rounded-md p-2 shadow-md shadow-gray-400 overflow-y-scroll">
+    <section className="bg-white w-full  dark:bg-slate-900  rounded-md p-2 shadow-md shadow-gray-400 dark:shadow-slate-800  overflow-y-scroll">
         <article className='w-full text-end'>
             <button onClick={()=>close(false)} className='p-1 px-3 bg-white hover:bg-gray-300 dark:bg-slate-950 dark:hover:bg-slate-800  shadow-sm shadow-gray-400 dark:shadow-slate-700 rounded-full'>X</button>
         </article>

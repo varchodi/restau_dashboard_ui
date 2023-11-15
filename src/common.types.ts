@@ -53,3 +53,11 @@ export type OrderCardType = {
     totalPayment: number;
     status: StatusType;
 }
+
+export type AnalyticCardType={
+    type: 'revenue'|'ordered'|'customer';
+    percentage: number;
+    direction: 'up' | 'down';
+    total: number;
+    icon:JSX.Element
+}

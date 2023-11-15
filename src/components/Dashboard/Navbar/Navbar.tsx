@@ -4,6 +4,7 @@ import { Nav_link_types } from '../../../common.types'
 import NavLinkCard from './NavLinkCard'
 import { BiMessageDetail } from 'react-icons/bi'
 import { IoMdNotificationsOutline } from 'react-icons/io'
+import ThemeToggle from './ThemeToggler'
 
 const Navbar = ({ isShown, setShow }: {
   isShown: boolean,
@@ -16,6 +17,7 @@ const Navbar = ({ isShown, setShow }: {
         {/* restaurent logo */}
         <div className='text-start p-4 font-bold text-2xl flex justify-between'>
           <h1>Logo</h1>
+          <p className='hidden md:block'><ThemeToggle/></p>
           <button className='md:hidden font-normal text-lg' onClick={()=>setShow((x)=>!x)}>X</button>
         </div>
         {/* navbar links */}
@@ -27,8 +29,9 @@ const Navbar = ({ isShown, setShow }: {
             }
         </div>
       </section>
-      <section className='w-full'>
-              <h1>helps and stuffs</h1>
+      <section className='w-full text-start'>
+        {/* ?? theme */}
+        <p className='block md:hidden'><ThemeToggle/></p>
               <div className="w-full flex lg:hidden flex-row md:flex-row  justify-start items-center">    
             {/* message notif btn */}
             <article className="flex justify-center m-0">

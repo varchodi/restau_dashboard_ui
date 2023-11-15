@@ -4,11 +4,11 @@ import { FoodCardType } from '../../../common.types'
 const FoodCard = ({id,name,price,imgUrl,reduction,reductionPrice,isRecomended}:FoodCardType) => {
   return (
       <Link
-          className='w-full sm:w-11/12 max-h-full flex gap-1 flex-col relative shadow-md hover:bg-gray-200 hover:dark:bg-slate-800 hover:shadow-lg'
+          className='w-full sm:w-11/12 max-h-full flex gap-1 flex-col relative shadow-md hover:bg-slate-200 hover:dark:bg-slate-900 hover:shadow-lg rounded-md'
           to={`/dashboard/products/${id}`}>
         <img className='object-cover h-64 sm:h-2/3 ' src={imgUrl} alt={name}/>
-        <p className='text-sm text-gray-600 w-full text-start'>{name}</p>
-        <div className='flex items-baseline justify-start'>
+        <p className='text-sm text-gray-600 w-full text-start px-2'>{name}</p>
+        <div className='flex items-baseline justify-start px-2'>
               <p className='text-lg font-bold'>${reductionPrice?reductionPrice:price}</p>
               {reductionPrice && <del className='text-xs font-semibold text-gray-600'>${price}</del> }
         </div>
