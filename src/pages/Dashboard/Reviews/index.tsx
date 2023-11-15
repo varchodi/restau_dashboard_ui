@@ -19,13 +19,13 @@ const ReviewsPage = () => {
     //let use reviews from fake revews , jut for testing
     const reviews = new Array(30).fill(fakeReview);
   return (
-    <div  className='h-full flex flex-col-reverse lg:flex-row gap-4 rounded-lg overflow-y-hidden  text-gray-600 dark:text-white relative'>
-      <section className='bg-gray-100 dark:bg-slate-800 p-2 w-full h-full lg:w-2/3  md:p-4 overflow-y-hidden'>
+    <div  className='h-full flex flex-col-reverse lg:flex-row gap-4 rounded-lg overflow-y-auto  text-gray-600 dark:text-white relative'>
+      <section className='bg-gray-100 dark:bg-slate-800 p-2 w-full lg:w-2/3  md:p-4 overflow-y-hidden'>
         <article className='mb-4'>
             <h1 className='font-bold text-lg text-start'>Recent reviews</h1>
             <p className='text-sm text-start'>Here is customer reviews</p>
         </article>
-        <article className='flex flex-col gap-4 overflow-y-scroll h-full'>
+        <article className='flex flex-col gap-4 overflow-y-auto h-full'>
             {
                 reviews.map((review,i) => (
                     <ReviewCard key={i} {...review} />

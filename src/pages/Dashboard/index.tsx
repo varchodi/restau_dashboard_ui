@@ -49,21 +49,22 @@ const Dashboard = () => {
   // ?? fetch most ordered foods here
   const most = new Array(2).fill(temp_food);
   return (
-    <main className='w-full h-full flex flex-col-reverse lg:flex-row gap-4 rounded-md overflow-y-hidden  text-gray-600 dark:text-white relative text-start'>
-      <section className='h-full w-full md:w-8/12  bg-gray-100  dark:bg-slate-800 rounded-md'>
+    <main className='w-full h-full flex flex-col lg:flex-row gap-4 rounded-md overflow-y-auto lg:overflow-y-hidden   text-gray-600 dark:text-white relative text-start'>
+      <section className='md:h-full w-full lg:w-8/12  bg-gray-100  dark:bg-slate-800 rounded-md flex flex-col lg:overflow-y-auto'>
       <article className='mb-4 border-b-2 border-b-gray-300 p-2 md:p-4'>
-            <h1 className='font-bold text-xl text-start'>Dashboard</h1>
+          <h1 className='font-bold text-xl text-start'>Dashboard</h1>
           <p className='text-sm text-start'>{ new Date().toDateString()}</p>
       </article>
         
-      <article className='flex flex-wrap justify-start gap-4 p-2 md:p-4'>
+      <article className='flex flex-wrap justify-start gap-4 p-2 md:p-4 '>
           {
             analytics.map((analytic, i) => <AnalyticsCard key={i} {...analytic} />)
           }
-      </article>
-      <article className='h-full p-2 md:p-4 text-xl'>
+        </article>
+        {/* foods */}
+      <article className='p-2 md:p-4 text-xl '>
           <h1 className=' font-bold'>Popolar Foods</h1>
-          <div className=" grid p-4 grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-y-1 sm:gap-y-4 overflow-y-auto">
+          <div className=" grid p-4 grid-cols-1 sm:grid-cols-3 md:hidden lg:grid gap-y-1 sm:gap-y-4  overflow-y-auto">
           {
               foods.map((food,i) => (
               // ??  try to fix this ...
@@ -72,9 +73,11 @@ const Dashboard = () => {
               ))
           }
         </div>
-      </article>
+        </article>
+        
       </section>
-      <section className='h-full w-full md:w-4/12   rounded-md flex flex-col gap-4'>
+
+      <section className='h-auto w-full lg:w-4/12   rounded-md flex flex-col gap-4'>
         
       <article className='bg-gray-100 dark:bg-slate-800 p-2 md:p-4 text-start'>
         <h1 className='mb-4 font-bold text-xl'>Latest Review</h1>
@@ -105,6 +108,7 @@ const Dashboard = () => {
         
       </section>
       </section>
+      
     </main>
   )
 }
