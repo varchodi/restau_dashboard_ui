@@ -16,7 +16,7 @@ const Customers = () => {
     }
     
   return (
-    <div className='h-full flex gap-4 rounded-lg overflow-y-hidden relative'>
+    <main className='h-full flex gap-4 rounded-lg overflow-y-hidden relative'>
       <section className={`h-full w-full md:w-5/12 ${openInfo?"hidden sm:block":"block"}  bg-gray-100  dark:bg-slate-800 rounded-md `}>
         <article
         
@@ -34,7 +34,7 @@ const Customers = () => {
         </div>
       </section>
       <CustomerInfos close={setOpenInfo} isOpened={openInfo} customer={ currentCustomer} />
-    </div>
+    </main>
   )
 }
 

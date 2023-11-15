@@ -7,8 +7,8 @@ const CustomerInfos = ({ close,isOpened, customer }: {
     customer: string;
     isOpened:boolean;
 }) => {
-    // customer props has customer id , u can fetch specific user from that id
-
+    //?? customer props has customer id , u can fetch specific user from that id
+    console.log(customer)
 
     //fake fetched customer data 
     const data = {

@@ -8,6 +8,7 @@ import Layout from './components/Dashboard/layout.tsx';
 import ProductsPage from './pages/Dashboard/products/index.tsx';
 import Customers from './pages/Dashboard/Customers/index.tsx';
 import ReviewsPage from './pages/Dashboard/Reviews/index.tsx';
+import OrdersPage from './pages/Dashboard/Orders/index.tsx';
 
 //routes settings
 const routes = createBrowserRouter([
@@ -30,7 +31,7 @@ const routes = createBrowserRouter([
   {
     path: "/dashboard/orders",
     element:<Layout>
-    <App/>
+    <OrdersPage/>
   </Layout>
   },
   {

@@ -42,3 +42,14 @@ export type ReviewCardType = {
     avis: [string, string],
     description: string;
 }
+
+export type StatusType = "completed" | "pending" | "preparing";
+
+export type OrderCardType = {
+    id: string;
+    user?: CustomerCardType;
+    user_id?: string;
+    menu: string;
+    totalPayment: number;
+    status: StatusType;
+}

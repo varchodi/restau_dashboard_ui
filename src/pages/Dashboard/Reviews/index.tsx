@@ -1,4 +1,3 @@
-import React from 'react'
 import { ReviewCardType } from '../../../common.types'
 import ReviewCard from '../../../components/Dashboard/Review/ReviewCard';
 
@@ -18,7 +17,7 @@ const ReviewsPage = () => {
 
     //??fetch reviews from db
     //let use reviews from fake revews , jut for testing
-    const reviews = new Array(20).fill(fakeReview);
+    const reviews = new Array(30).fill(fakeReview);
   return (
     <div  className='h-full flex flex-col-reverse lg:flex-row gap-4 rounded-lg overflow-y-hidden  text-gray-600 dark:text-white relative'>
       <section className='bg-gray-100 dark:bg-slate-800 p-2 w-full h-full lg:w-2/3  md:p-4 overflow-y-hidden'>
