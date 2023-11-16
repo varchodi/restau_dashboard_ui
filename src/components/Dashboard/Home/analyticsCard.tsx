@@ -8,7 +8,7 @@ const AnalyticsCard = ({
     type,percentage,direction,total
 }: AnalyticCardType) => {
   return (
-    <div className="w-full lg:w-[250px]  flex flex-col justify-between gap-6 bg-gray-200 dark:bg-slate-900 rounded-lg p-4 text-start hover:shadow-md dark:shadow-slate-900">
+    <div className="w-full lg:w-[230px]  flex flex-col justify-between gap-6 bg-gray-200 dark:bg-slate-900 rounded-lg p-4 text-start hover:shadow-md dark:shadow-slate-900">
           <section className="flex gap-4">
         <p className={`text-2xl p-2 rounded-lg dark:bg-opacity-20 ${type==='revenue'?'text-purple-600 dark:text-purple-400 bg-purple-300  ':type==='ordered'?'text-orange-600 dark:text-orange-400 bg-orange-100 ':'text-green-600 dark:text-green-400 bg-green-100 '}`}>
               {
